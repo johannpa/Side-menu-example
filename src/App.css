@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.container {
+  width: 90%;
+  margin: 30px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the side menu */
+/* By default, the menu is invisible because its left position is set to -100% */
+.side-nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  padding: 60px 50px 30px 30px;
+  background-color: #333;
+  transition: 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* This makes the side menu visible */
+.side-nav--active {
+  left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Style the side menu's links */
+.side-nav a {
+  margin: 8px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.side-nav a:hover {
+  color: orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* A horizontal line to separate sections of the menu */
+.divider {
+  margin: 15px 0;
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Stye the close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-button:hover {
+  color: orange;
+}
+
+/* Style the open menu */
+.open-button {
+  padding: 8px 18px;
+  background: #4caf50;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.open-button:hover {
+  background: #8bc34a;
 }
